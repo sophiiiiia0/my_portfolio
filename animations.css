@@ -1,16 +1,194 @@
-/* Fade In Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ===== General Hidden State ===== */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
-/* Animation Class */
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
-} 
+/* ===== Show State ===== */
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+/* ===== Hero Section ===== */
+.wave {
+  display: inline-block;       /* keep it in same line */
+  vertical-align: middle;      /* align perfectly with text */
+  margin-left: 5px;            /* space between text and hand */
+  transform-origin: 70% 70%;   /* pivot point for waving */
+  animation: wave 1.5s ease-in-out 2; /* 1 time only */
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60%, 100% { transform: rotate(0deg); }
+}
+.hero-section #paragraph,
+.hero-section #buttons {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+.hero-section #profile img {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease-out;
+}
+
+.hero-section.show #paragraph,
+.hero-section.show #buttons {
+  opacity: 1;
+  transform: translateX(0);
+}
+.hero-section.show #profile img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Skills Section ===== */
+.skills-section p {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+.skills-section.show p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Skill cards - staggered */
+.skill-card {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+/* ===== Testimonials Section ===== */
+.testimonial-text {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+.testimonials-section.show .testimonial-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Contact Section ===== */
+.contact-info {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+.message-form {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+.contact-container.show .contact-info {
+  opacity: 1;
+  transform: translateX(0);
+}
+.contact-container.show .message-form {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Title ===== */
+.title {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.title.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== Mobile Optimization (smaller padding & spacing) ===== */
+@media (max-width: 600px) {
+
+  /* Hero Section */
+  .hero-section {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  #paragraph {
+    max-width: 100%;
+  }
+
+  #buttons {
+    gap: 12px;
+  }
+
+  #buttons button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* Skills Section */
+  .skills-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .skill-card {
+    width: 130px;
+    height: 130px;
+    padding: 15px;
+  }
+
+  /* Projects Section */
+  .projects-section {
+    padding: 40px 15px;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  /* Testimonials */
+  #testimonials {
+    padding: 50px 15px;
+  }
+
+  .testimonial-card {
+    padding: 25px 20px;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    padding: 50px 15px;
+    gap: 25px;
+  }
+
+  .message-form {
+    padding: 30px 20px;
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
