@@ -29,34 +29,114 @@
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <!-- Navigation links will be added here -->
-        </nav>
+       <div id="Name">
+         <h1>Sophia Maarouf</h1>
+        </div>
+<div id="links">
+  <nav>
+    <a href="https://github.com/anasn77" target="_blank">
+      <i class="fab fa-github"></i><span>GitHub</span> 
+    </a>
+    <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank">
+      <i class="fab fa-linkedin"></i><span> LinkedIn</span>
+    </a>
+    <a href="mailto:anasnaaman4@gmail.com" class="email-link">
+      <i class="fas fa-envelope"></i> <span>Email</span>
+    </a>
+  </nav>
+</div>
     </header>
 
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero-section">
+           <div id="paragraph">
+            <h1>Hi, I'm Sophia <span class="wave">👋</span></h1>
+              <p> I’m an Interior Design and IT graduate with a strong passion for creativity and technology. I have hands-on skills in Python, C programming, artificial intelligence, and database management. My background allows me to blend design thinking with technical problem-solving. I’m deeply passionate about learning, innovating, and creating impactful digital and design solutions.</p>
+            </div>
+             <div id="profile"><img src="images/sophiapf.jpeg" alt=""></div>
+             <div id="buttons">
+             <button data-target="skills">Skills</button>
+             <button data-target="testimonials">Testimony</button>
+             <button data-target="contact-container">Contact</button>
+            </div>
+
             <!-- Hero content will be added here -->
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
+           <h1> My Skills</h3>
+
+           <p>I have a diverse skill set that combines both design and technology. In interior design, I’m skilled in using tools like **3ds Max, AutoCAD, and Photoshop** to create detailed and creative visual concepts. On the tech side, I’m proficient in **HTML, CSS, Python, C, and database management**, allowing me to build and design interactive digital experiences. My background bridges aesthetics and functionality, enabling me to approach every project with both creativity and technical precision.
+</p> <div id="skills-container" class="skills-grid"></div>
             <!-- Skills content will be dynamically added -->
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
+           <h1>My projects</h1>
+           <p>Here are some of my recent projects that showcase my skills and experience.</p>
+            <div id="projects-container" class="projects-grid"></div>
             <!-- Projects will be dynamically added -->
         </section>
+        <!--testimony section-->
+        <section id="testimonials" class="testimonials-section">
+         <h2>What People Say</h2>
+        <div id="testimonials-container" class="testimonials-container">
+    <!-- Testimonials will be added dynamically -->
+        </div>
+          </section>
+<div class="title">
+        <h1>Let's Connect</h1>
+        <p>Ready to bring your ideas to life?</p> 
+      </div>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <form id="contact-form">
-                <!-- Contact form will be added here -->
-            </form>
-        </section>
+        <section class="contact-container"id="contact-container">
+    <div class="contact-info">
+      
+       <h1>Get inTouch</h1>
+        <p>Feel free to reach out to me for any inquiries, collaborations, or opportunities. Whether you have a project in mind, need assistance, or just want to connect, I'd be happy to hear from you. Fill out the form and I'll get back to you as soon as possible.</p>
+        <h1>Contact Info</h1>
+        <div class="info-box">
+            <div class="icon email-icon">📧</div>
+            <div class="info-text">
+                <p class="label">EMAIL</p>
+                <p class="value"> sofia.maarouf20@gmai.com </p>
+            </div>
+        </div>
+        <div class="info-box">  
+            <div class="icon phone-icon">📞</div>
+            <div class="info-text">
+                <p class="label">PHONE</p>
+                <p class="value">+961 76157525 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-form " >
+        <div class="form-header">
+            <div class="header-icon">📧</div>
+            <h2>Send Message</h2>
+            <p>I'll respond within 24 hours</p>
+        </div>
+
+        <form>
+            <label for="name">Full Name <span>*</span></label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" placeholder="Enter your email address" required>
+
+            <label for="message">Message <span>*</span></label>
+            <textarea id="message" placeholder="Tell me about your project or inquiry..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
     </main>
 
     <!-- Custom JavaScript -->
