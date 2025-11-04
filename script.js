@@ -204,4 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+<<<<<<< HEAD
 // Form validation and submission will be added later
+=======
+// Form validation and submission will be added later
+>>>>>>> 57e8abb67dfe27e0def26016075bce0d4c91c285
